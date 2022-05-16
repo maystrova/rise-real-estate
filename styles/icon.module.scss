@@ -1,0 +1,18 @@
+$small: 15px;
+$medium: 20px;
+
+.main {
+  display: block;
+}
+
+.small {
+  width: $small;
+
+  @extend .main
+}
+
+.medium {
+  width: $medium;
+
+  @extend .main
+}

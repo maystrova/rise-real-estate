@@ -1,9 +1,11 @@
 import Page from 'components/page'
+import Header from 'components/header'
 
 const HomePage = () => {
     return (
         <Page>
-            <div>Hey! Lets start exploring</div>
+            <Header />
+            <div></div>
         </Page>
     )
 }

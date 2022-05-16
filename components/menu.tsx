@@ -6,4 +6,4 @@ const Menu = ({}: MenuProps) => {
     return <div className={style.container}></div>
 }
 
-export { Menu }
+export default Menu

@@ -1,0 +1,17 @@
+$extra-small: 480px;
+$small: 768px;
+$medium: 1024px;
+$large: 1280px;
+$extra-large: 1440px;
+
+.container {
+
+  @media (min-width: $extra-small) {
+    max-width: $small;
+
+}
+}
+
+.main {
+}
+
