@@ -1,6 +1,7 @@
 import style from 'styles/icon.module.scss'
 
 export enum ICON_SIZE {
+    X_SMALL = 'x-small',
     SMALL = 'small',
     MEDIUM = 'medium',
 }
@@ -19,6 +20,8 @@ const Icon = ({ src, alt = 'icon', size }: IconProps) => {
                     ? style.small
                     : size === ICON_SIZE.MEDIUM
                     ? style.medium
+                    : size === ICON_SIZE.X_SMALL
+                    ? style.x_small
                     : ICON_SIZE.SMALL
             }
             alt={alt}

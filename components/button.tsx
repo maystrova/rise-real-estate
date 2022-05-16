@@ -11,24 +11,30 @@ interface ButtonProps {
     title: string
 }
 
+const buttonTypeHandler = (type: BUTTON_TYPE): string => {
+    switch (type) {
+        case BUTTON_TYPE.LOCATION:
+            return style.location
+    }
+    return BUTTON_TYPE.DEFAULT
+}
+
 const Button = ({ type, title }: ButtonProps) => {
     return (
-        <button
-            className={
-                type === BUTTON_TYPE.LOCATION
-                    ? style.location
-                    : BUTTON_TYPE.DEFAULT
-            }
-        >
+        <button className={buttonTypeHandler(type)}>
             {BUTTON_TYPE.LOCATION && (
-                <div>
+                <div className={style.location_container}>
                     <Icon
                         src={'/static/location-icon.svg'}
                         size={ICON_SIZE.SMALL}
                     />
+                    <div>{title}</div>
+                    <Icon
+                        src={'/static/down-icon.svg'}
+                        size={ICON_SIZE.X_SMALL}
+                    />
                 </div>
             )}
-            {title}
         </button>
     )
 }

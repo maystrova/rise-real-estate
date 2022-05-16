@@ -1,5 +1,6 @@
 .main {
   cursor: pointer;
+
 }
 
 .location {
@@ -8,7 +9,15 @@
   border: 1px solid #ECEDF3;
   border-radius: 25px;
   background: transparent;
+  padding: 18px 16px;
+
 
   @extend .main
+}
+
+.location_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 

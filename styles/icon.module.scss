@@ -1,8 +1,15 @@
+$x_small: 10px;
 $small: 15px;
 $medium: 20px;
 
 .main {
   display: block;
+}
+
+.x_small {
+  width: $x_small;
+
+  @extend .main
 }
 
 .small {
