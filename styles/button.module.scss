@@ -1,6 +1,5 @@
 .main {
   cursor: pointer;
-
 }
 
 .location {
@@ -20,4 +19,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.location_title {
+  font-size: 10px;
+}
+
+.notifications {
+  border: 1px solid #8BC83F;
+  border-radius: 50%;
+
+  @extend .main
+}
+
 

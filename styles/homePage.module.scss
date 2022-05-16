@@ -5,6 +5,7 @@ $large: 1280px;
 $extra-large: 1440px;
 
 .container {
+  padding: 24px;
 
   @media (min-width: $extra-small) {
     max-width: $small;
