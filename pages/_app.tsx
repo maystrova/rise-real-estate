@@ -1,6 +1,6 @@
-import '../styles/globals.scss'
+import 'styles/globals.scss'
 import type { AppProps } from 'next/app'
-import { RiseProvider } from '../context/storeContext'
+import { RiseProvider } from 'context/storeContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
