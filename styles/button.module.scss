@@ -1,4 +1,4 @@
-.main {
+.container {
   cursor: pointer;
 }
 
@@ -10,25 +10,14 @@
   background: transparent;
   padding: 18px 16px;
 
-
-  @extend .main
-}
-
-.location_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.location_title {
-  font-size: 10px;
+  @extend .container
 }
 
 .notifications {
   border: 1px solid #8BC83F;
   border-radius: 50%;
 
-  @extend .main
+  @extend .container
 }
 
 

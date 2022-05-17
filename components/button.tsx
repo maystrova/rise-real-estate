@@ -1,5 +1,4 @@
 import style from 'styles/button.module.scss'
-import Icon, { ICON_SIZE } from 'components/icon'
 
 export enum BUTTON_TYPE {
     LOCATION = 'location',
@@ -8,8 +7,9 @@ export enum BUTTON_TYPE {
 }
 
 interface ButtonProps {
+    onClick: () => void
+    children: React.ReactElement
     type: BUTTON_TYPE
-    title?: string
 }
 
 const buttonTypeHandler = (type: BUTTON_TYPE): string => {
@@ -22,31 +22,10 @@ const buttonTypeHandler = (type: BUTTON_TYPE): string => {
     return BUTTON_TYPE.DEFAULT
 }
 
-const Button = ({ type, title }: ButtonProps) => {
+const Button = ({ onClick, children, type }: ButtonProps) => {
     return (
-        <button className={buttonTypeHandler(type)}>
-            {BUTTON_TYPE.LOCATION ? (
-                <div className={style.location_container}>
-                    <Icon
-                        src={'/static/location-icon.svg'}
-                        size={ICON_SIZE.SMALL}
-                    />
-                    <div className={style.location_title}>{title}</div>
-                    <Icon
-                        src={'/static/down-icon.svg'}
-                        size={ICON_SIZE.X_SMALL}
-                    />
-                </div>
-            ) : BUTTON_TYPE.NOTIFICATION ? (
-                <div className={style.notifications}>
-                    <Icon
-                        src={'/static/notification-icon.svg'}
-                        size={ICON_SIZE.MEDIUM}
-                    />
-                </div>
-            ) : (
-                <div></div>
-            )}
+        <button className={buttonTypeHandler(type)} onClick={onClick}>
+            {children}
         </button>
     )
 }
