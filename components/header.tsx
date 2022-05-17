@@ -10,7 +10,7 @@ const Header = ({}: HeaderProps) => {
     return (
         <div className={style.container}>
             <Location />
-            <div>
+            <div className={style.container_userActions}>
                 <Notifications />
                 <User />
             </div>

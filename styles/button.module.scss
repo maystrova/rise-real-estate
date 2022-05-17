@@ -1,40 +1,40 @@
 .container {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .location {
-  width: 163px;
-  height: 50px;
-  border: 1px solid #ECEDF3;
-  border-radius: 25px;
-  background: transparent;
-  padding: 18px 16px;
+    width: 163px;
+    height: 50px;
+    border: 1px solid #ecedf3;
+    border-radius: 25px;
+    background: transparent;
+    padding: 18px 16px;
 
-  @extend .container
+    @extend .container;
 }
 
 .round {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .notifications {
-  border: 1px solid #8BC83F;
+    border: 1px solid #8bc83f;
 
-
-  @extend .container, .round
+    @extend .container, .round;
 }
 
 .user {
-  border: 1px solid #ECEDF3;
+    border: 1px solid #ecedf3;
 
-  @extend .container, .round
+    img {
+        border-radius: 50%;
+    }
 
+    @extend .container, .round;
 }
-
-

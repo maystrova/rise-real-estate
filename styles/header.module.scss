@@ -1,3 +1,16 @@
 .container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        'location'
+        'actions';
+    align-items: center;
+    grid-template-columns: 4fr 1fr;
+}
 
+.container_userActions {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
 }

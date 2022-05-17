@@ -6,7 +6,7 @@ interface UserProps {}
 const User = ({}: UserProps) => {
     return (
         <Button type={BUTTON_TYPE.USER} onClick={() => {}}>
-            <Icon src={'/static/user.svg'} size={ICON_SIZE.BIG} />
+            <Icon src={'/static/user.jpeg'} size={ICON_SIZE.BIG} />
         </Button>
     )
 }
