@@ -1,3 +1,5 @@
+$shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
 .container {
     cursor: pointer;
 }
@@ -9,6 +11,7 @@
     border-radius: 25px;
     background: transparent;
     padding: 18px 16px;
+    box-shadow: $shadow;
 
     @extend .container;
 }
@@ -21,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: $shadow;
 }
 
 .notifications {
