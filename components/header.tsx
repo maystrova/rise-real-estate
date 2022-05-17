@@ -1,4 +1,6 @@
 import Location from 'components/location'
+import Notifications from 'components/notifications'
+import User from 'components/user'
 
 import style from 'styles/header.module.scss'
 
@@ -8,7 +10,10 @@ const Header = ({}: HeaderProps) => {
     return (
         <div className={style.container}>
             <Location />
-            <div></div>
+            <div>
+                <Notifications />
+                <User />
+            </div>
         </div>
     )
 }

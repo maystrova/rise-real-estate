@@ -1,8 +1,10 @@
+import React from 'react'
 import style from 'styles/button.module.scss'
 
 export enum BUTTON_TYPE {
     LOCATION = 'location',
     NOTIFICATION = 'notifications',
+    USER = 'user',
     DEFAULT = 'default',
 }
 
@@ -18,6 +20,8 @@ const buttonTypeHandler = (type: BUTTON_TYPE): string => {
             return style.location
         case BUTTON_TYPE.NOTIFICATION:
             return style.notifications
+        case BUTTON_TYPE.USER:
+            return style.user
     }
     return BUTTON_TYPE.DEFAULT
 }

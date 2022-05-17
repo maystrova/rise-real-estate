@@ -1,6 +1,7 @@
 $x_small: 10px;
 $small: 15px;
 $medium: 20px;
+$big: 44px;
 
 .main {
   display: block;
@@ -20,6 +21,12 @@ $medium: 20px;
 
 .medium {
   width: $medium;
+
+  @extend .main
+}
+
+.big {
+  width: $big;
 
   @extend .main
 }
