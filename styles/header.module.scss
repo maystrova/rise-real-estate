@@ -1,17 +1,33 @@
+$extra-small: 370px;
+$small: 768px;
+$medium: 1024px;
+$large: 1280px;
+$extra-large: 1440px;
+
 .container {
-    display: grid;
-    gap: 10px;
-    grid-template-areas:
-        'location'
-        'actions';
-    align-items: center;
-    grid-template-columns: 4fr 1fr;
     margin-bottom: 35px;
+    display: grid;
+    gap: 20px;
+
+    @media (min-width: $extra-small) {
+        max-width: $extra-large;
+        align-items: center;
+        grid-template-areas:
+            'location'
+            'actions';
+        grid-template-columns: 4fr 1fr;
+    }
 }
 
 .container_userActions {
     display: grid;
     gap: 10px;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50px 50px;
+
+    @media (min-width: $extra-small) {
+        max-width: $extra-large;
+        grid-template-columns: 1fr 1fr;
+        justify-self: right;
+    }
 }
