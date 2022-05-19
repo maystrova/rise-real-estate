@@ -23,3 +23,9 @@ $extra-large: 1440px;
     margin-bottom: 20px;
     letter-spacing: 0.5px;
 }
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

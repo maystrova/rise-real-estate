@@ -5,6 +5,7 @@ export enum BUTTON_TYPE {
     LOCATION = 'location',
     NOTIFICATION = 'notifications',
     USER = 'user',
+    CATEGORY = 'category',
     DEFAULT = 'default',
 }
 
@@ -12,6 +13,8 @@ interface ButtonProps {
     onClick: () => void
     children: React.ReactElement
     type: BUTTON_TYPE
+    backgroundColor?: string
+    fontColor?: string
 }
 
 const buttonTypeHandler = (type: BUTTON_TYPE): string => {
@@ -22,13 +25,25 @@ const buttonTypeHandler = (type: BUTTON_TYPE): string => {
             return style.notifications
         case BUTTON_TYPE.USER:
             return style.user
+        case BUTTON_TYPE.CATEGORY:
+            return style.category
     }
     return BUTTON_TYPE.DEFAULT
 }
 
-const Button = ({ onClick, children, type }: ButtonProps) => {
+const Button = ({
+    onClick,
+    children,
+    type,
+    fontColor,
+    backgroundColor,
+}: ButtonProps) => {
     return (
-        <button className={buttonTypeHandler(type)} onClick={onClick}>
+        <button
+            style={{ color: fontColor, backgroundColor: backgroundColor }}
+            className={buttonTypeHandler(type)}
+            onClick={onClick}
+        >
             {children}
         </button>
     )
