@@ -29,3 +29,11 @@ $extra-large: 1440px;
     justify-content: space-between;
     align-items: center;
 }
+
+.specialOffers {
+    @media (min-width: $small) {
+        max-width: $extra-large;
+        display: flex;
+        align-items: center;
+    }
+}
