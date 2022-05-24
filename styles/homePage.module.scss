@@ -28,12 +28,10 @@ $extra-large: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 32px;
 }
 
 .specialOffers {
-    @media (min-width: $small) {
-        max-width: $extra-large;
-        display: flex;
-        align-items: center;
-    }
+    display: flex;
+    gap: 20px;
 }

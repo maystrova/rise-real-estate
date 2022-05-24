@@ -72,9 +72,10 @@ const HomePage = () => {
                     {SPECIAL_OFFERS.map(offer => {
                         return (
                             <SpecialOfferCard
+                                key={offer.id}
                                 title={offer.title}
                                 description={offer.description}
-                                background={'url("/static/halloween.png")'}
+                                background={`url(${offer.img})`}
                             />
                         )
                     })}

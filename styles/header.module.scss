@@ -20,14 +20,8 @@ $extra-large: 1440px;
 }
 
 .container_userActions {
-    display: grid;
+    display: flex;
     gap: 10px;
     align-items: center;
-    grid-template-columns: 50px 50px;
-
-    @media (min-width: $extra-small) {
-        max-width: $extra-large;
-        grid-template-columns: 1fr 1fr;
-        justify-self: right;
-    }
+    justify-self: right;
 }
