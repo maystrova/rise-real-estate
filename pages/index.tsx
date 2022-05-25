@@ -1,14 +1,16 @@
 import { useState } from 'react'
 
-import { CategoryButtonType, SpecialOfferType } from 'services/type'
+import { CategoryButtonType, EstateType, SpecialOfferType } from 'services/type'
 
 import Page from 'components/page'
 import Header from 'components/header'
 import CategoryButton from 'components/categoryButton'
 import Search from 'components/search'
 import ActiveLink from 'components/activeLink'
-
+import SubHeader from 'components/subHeader'
+import EstateCard, { ESTATE_TYPE } from 'components/estateCard'
 import SpecialOfferCard from 'components/specialOfferCard'
+
 import style from 'styles/homePage.module.scss'
 
 const title: string = `Let's start exploring`
@@ -35,6 +37,18 @@ const HomePage = () => {
             id: 2,
             img: '/static/bali-beachview.png',
             description: 'All discount up to 60%',
+        },
+    ]
+
+    const ESTATES: EstateType[] = [
+        {
+            title: 'Sky Dandelions Apartment',
+            id: 1,
+            img: '/static/sky-dandelions-ap.png',
+            price: 290,
+            type: ESTATE_TYPE.APARTMENT,
+            rating: 4.9,
+            location: 'Jakarta, Indonesia',
         },
     ]
 
@@ -79,6 +93,27 @@ const HomePage = () => {
                             />
                         )
                     })}
+                </div>
+                <div className={style.featuredEstates}>
+                    <SubHeader
+                        title={'Features Estates'}
+                        subTitle={'view all'}
+                    />
+                    <div>
+                        {ESTATES.map(estate => {
+                            return (
+                                <EstateCard
+                                    key={estate.id}
+                                    img={estate.img}
+                                    title={estate.title}
+                                    rating={estate.rating}
+                                    location={estate.location}
+                                    price={estate.price}
+                                    type={estate.type}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </Page>

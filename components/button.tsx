@@ -6,6 +6,7 @@ export enum BUTTON_TYPE {
     NOTIFICATION = 'notifications',
     USER = 'user',
     CATEGORY = 'category',
+    FAVOURITE = 'favourite',
     DEFAULT = 'default',
 }
 
@@ -27,6 +28,8 @@ const buttonTypeHandler = (type: BUTTON_TYPE): string => {
             return style.user
         case BUTTON_TYPE.CATEGORY:
             return style.category
+        case BUTTON_TYPE.FAVOURITE:
+            return style.favourite
     }
     return BUTTON_TYPE.DEFAULT
 }
