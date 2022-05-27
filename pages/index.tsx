@@ -50,6 +50,15 @@ const HomePage = () => {
             rating: 4.9,
             location: 'Jakarta, Indonesia',
         },
+        {
+            title: 'The laurels Villa',
+            id: 2,
+            img: '/static/laurels-villa.png',
+            type: ESTATE_TYPE.VILLA,
+            price: 300,
+            location: 'Bali, Indonesia',
+            rating: 4.9,
+        },
     ]
 
     return (

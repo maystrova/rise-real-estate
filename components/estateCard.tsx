@@ -29,6 +29,18 @@ const EstateCard = ({
         <div className={style.container}>
             <div>
                 <img className={style.picture} src={img} alt='img' />
+                <div className={style.favourite}>
+                    <Icon src={'/static/heart.svg'} size={ICON_SIZE.XX_SMALL} />
+                </div>
+                <div className={style.estateType}>
+                    {type === ESTATE_TYPE.APARTMENT
+                        ? 'Apartment'
+                        : type === ESTATE_TYPE.HOUSE
+                        ? 'House'
+                        : type === ESTATE_TYPE.VILLA
+                        ? 'Villa'
+                        : ''}
+                </div>
             </div>
             <div className={style.main}>
                 <div className={style.main__header}>

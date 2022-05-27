@@ -6,6 +6,8 @@
     padding: 8px;
     display: flex;
     gap: 12px;
+    position: relative;
+    cursor: pointer;
 }
 
 .main {
@@ -24,6 +26,31 @@
     width: 130px;
     height: 140px;
     border-radius: 25px;
+}
+
+.estateType {
+    height: 27px;
+    background: rgba(35, 79, 104, 1);
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    bottom: 14px;
+    font-size: 8px;
+    padding: 9px 7px 9px 13px;
+    border-radius: 8px;
+}
+
+.favourite {
+    background: rgba(139, 200, 63, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 16px;
+    left: 15px;
 }
 
 .title {
