@@ -108,7 +108,7 @@ const HomePage = () => {
                         title={'Features Estates'}
                         subTitle={'view all'}
                     />
-                    <div>
+                    <div className={style.featuredEstates__list}>
                         {ESTATES.map(estate => {
                             return (
                                 <EstateCard
