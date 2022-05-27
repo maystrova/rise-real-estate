@@ -1,5 +1,5 @@
 .container {
-    width: 258px;
+    max-width: 300px;
     height: 156px;
     border-radius: 25px;
     background: rgba(245, 244, 248, 1);
@@ -8,8 +8,42 @@
     gap: 12px;
 }
 
+.main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main__header {
+    display: grid;
+    grid-row-gap: 8px;
+}
+
 .picture {
     width: 130px;
     height: 140px;
     border-radius: 25px;
+}
+
+.title {
+    font-size: 12px;
+    color: rgba(37, 43, 92, 1);
+    line-height: 18px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.rating__title {
+    font-size: 8px;
+    color: rgba(83, 88, 122, 1);
+}
+
+.price {
+    white-space: nowrap;
+    color: rgba(37, 43, 92, 1);
 }

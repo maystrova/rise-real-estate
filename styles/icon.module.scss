@@ -1,32 +1,39 @@
+$xx_small: 8px;
 $x_small: 10px;
 $small: 15px;
 $medium: 20px;
 $big: 44px;
 
 .main {
-  display: block;
+    display: block;
+}
+
+.xx_small {
+    width: $xx_small;
+
+    @extend .main;
 }
 
 .x_small {
-  width: $x_small;
+    width: $x_small;
 
-  @extend .main
+    @extend .main;
 }
 
 .small {
-  width: $small;
+    width: $small;
 
-  @extend .main
+    @extend .main;
 }
 
 .medium {
-  width: $medium;
+    width: $medium;
 
-  @extend .main
+    @extend .main;
 }
 
 .big {
-  width: $big;
+    width: $big;
 
-  @extend .main
+    @extend .main;
 }

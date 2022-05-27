@@ -1,3 +1,5 @@
+import Icon, { ICON_SIZE } from 'components/icon'
+
 import style from 'styles/estateCard.module.scss'
 
 export enum ESTATE_TYPE {
@@ -28,11 +30,25 @@ const EstateCard = ({
             <div>
                 <img className={style.picture} src={img} alt='img' />
             </div>
-            <div>
-                <div>{title}</div>
-                <div>{rating}</div>
-                <div>{location}</div>
-                <div>{price}</div>
+            <div className={style.main}>
+                <div className={style.main__header}>
+                    <div className={style.title}>{title}</div>
+                    <div className={style.rating}>
+                        <Icon
+                            src={'/static/star-icon.svg'}
+                            size={ICON_SIZE.XX_SMALL}
+                        />
+                        <div className={style.rating__title}>{rating}</div>
+                    </div>
+                    <div className={style.rating}>
+                        <Icon
+                            src={'/static/location-icon.svg'}
+                            size={ICON_SIZE.XX_SMALL}
+                        />
+                        <div className={style.rating__title}>{location}</div>
+                    </div>
+                </div>
+                <div className={style.price}>$ {price}/month</div>
             </div>
         </div>
     )
