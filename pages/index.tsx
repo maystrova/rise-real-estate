@@ -124,6 +124,9 @@ const HomePage = () => {
                         })}
                     </div>
                 </div>
+                <div>
+                    <SubHeader title={'Top Locations'} subTitle={'explore'} />
+                </div>
             </div>
         </Page>
     )
