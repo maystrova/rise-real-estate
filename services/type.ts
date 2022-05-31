@@ -21,3 +21,9 @@ export type EstateType = {
     type: ESTATE_TYPE
     price: number
 }
+
+export type TopLocationType = {
+    title: string
+    id: number
+    img: string
+}

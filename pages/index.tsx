@@ -1,6 +1,11 @@
 import { useState } from 'react'
 
-import { CategoryButtonType, EstateType, SpecialOfferType } from 'services/type'
+import {
+    CategoryButtonType,
+    EstateType,
+    SpecialOfferType,
+    TopLocationType,
+} from 'services/type'
 
 import Page from 'components/page'
 import Header from 'components/header'
@@ -12,6 +17,7 @@ import EstateCard, { ESTATE_TYPE } from 'components/estateCard'
 import SpecialOfferCard from 'components/specialOfferCard'
 
 import style from 'styles/homePage.module.scss'
+import LocationStick from '../components/locationStick'
 
 const title: string = `Let's start exploring`
 
@@ -59,6 +65,12 @@ const HomePage = () => {
             location: 'Bali, Indonesia',
             rating: 4.9,
         },
+    ]
+
+    const TOP_LOCATIONS: TopLocationType[] = [
+        { title: 'Bali', id: 1, img: '/static/bali.png' },
+        { title: 'Jakarta', id: 2, img: '/static/jakarta.png' },
+        { title: 'Yogyakarta', id: 3, img: '/static/yogyakarta.png' },
     ]
 
     return (
@@ -124,8 +136,19 @@ const HomePage = () => {
                         })}
                     </div>
                 </div>
-                <div>
+                <div className={style.featuredEstates}>
                     <SubHeader title={'Top Locations'} subTitle={'explore'} />
+                    <div className={style.featuredEstates__list}>
+                        {TOP_LOCATIONS.map(location => {
+                            return (
+                                <LocationStick
+                                    key={location.id}
+                                    title={location.title}
+                                    img={location.img}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </Page>
