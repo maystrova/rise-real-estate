@@ -2,7 +2,7 @@ import style from 'styles/subHeader.module.scss'
 
 interface SubHeaderProps {
     title: string
-    subTitle: string
+    subTitle?: string
 }
 
 const SubHeader = ({ title, subTitle }: SubHeaderProps) => {

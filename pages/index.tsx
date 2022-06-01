@@ -150,6 +150,15 @@ const HomePage = () => {
                         })}
                     </div>
                 </div>
+                <div>
+                    <SubHeader
+                        title={'Top Estate Agent'}
+                        subTitle={'Explore'}
+                    />
+                </div>
+                <div>
+                    <SubHeader title={'Explore Nearby Estates'} />
+                </div>
             </div>
         </Page>
     )
