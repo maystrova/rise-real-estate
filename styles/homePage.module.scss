@@ -28,7 +28,7 @@ $extra-large: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 35px;
 }
 
 .specialOffers {
@@ -46,4 +46,14 @@ $extra-large: 1440px;
 .featuredEstates__list {
     display: flex;
     gap: 10px;
+}
+
+.agents {
+    margin-bottom: 35px;
+}
+
+.agents__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

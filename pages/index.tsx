@@ -15,9 +15,11 @@ import ActiveLink from 'components/activeLink'
 import SubHeader from 'components/subHeader'
 import EstateCard, { ESTATE_TYPE } from 'components/estateCard'
 import SpecialOfferCard from 'components/specialOfferCard'
+import LocationStick from 'components/locationStick'
+import Profile, { USER_ICON_SIZE } from 'components/profile'
 
 import style from 'styles/homePage.module.scss'
-import LocationStick from '../components/locationStick'
+import { User } from '../services/user'
 
 const title: string = `Let's start exploring`
 
@@ -71,6 +73,13 @@ const HomePage = () => {
         { title: 'Bali', id: 1, img: '/static/bali.png' },
         { title: 'Jakarta', id: 2, img: '/static/jakarta.png' },
         { title: 'Yogyakarta', id: 3, img: '/static/yogyakarta.png' },
+    ]
+
+    const AGENTS: User[] = [
+        { name: 'Amanda', id: 1, email: '', avatar: '/static/user.svg' },
+        { name: 'Anderson', id: 2, email: '', avatar: '/static/user.svg' },
+        { name: 'Samantha', id: 3, email: '', avatar: '/static/user.svg' },
+        { name: 'Andrew', id: 4, email: '', avatar: '/static/user.svg' },
     ]
 
     return (
@@ -150,11 +159,22 @@ const HomePage = () => {
                         })}
                     </div>
                 </div>
-                <div>
+                <div className={style.agents}>
                     <SubHeader
                         title={'Top Estate Agent'}
                         subTitle={'Explore'}
                     />
+                    <div className={style.agents__list}>
+                        {AGENTS.map(agent => {
+                            return (
+                                <Profile
+                                    size={USER_ICON_SIZE.BIG}
+                                    name={agent.name}
+                                    key={agent.id}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
                 <div>
                     <SubHeader title={'Explore Nearby Estates'} />

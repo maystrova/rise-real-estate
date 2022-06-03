@@ -6,6 +6,7 @@ export enum ICON_SIZE {
     SMALL = 'small',
     MEDIUM = 'medium',
     BIG = 'big',
+    LARGE = 'large',
 }
 
 interface IconProps {
@@ -26,6 +27,8 @@ const iconSizeHandler = (size: ICON_SIZE): string => {
             return style.medium
         case ICON_SIZE.BIG:
             return style.big
+        case ICON_SIZE.LARGE:
+            return style.large
     }
     return style.small
 }

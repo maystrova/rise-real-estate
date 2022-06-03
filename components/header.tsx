@@ -1,8 +1,9 @@
 import Location from 'components/location'
 import Notifications from 'components/notifications'
-import User from 'components/user'
+import { USER_ICON_SIZE } from 'components/profile'
 
 import style from 'styles/header.module.scss'
+import Profile from 'components/profile'
 
 interface HeaderProps {}
 
@@ -12,7 +13,7 @@ const Header = ({}: HeaderProps) => {
             <Location />
             <div className={style.container_userActions}>
                 <Notifications />
-                <User />
+                <Profile size={USER_ICON_SIZE.SMALL} />
             </div>
         </div>
     )

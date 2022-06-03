@@ -3,6 +3,7 @@ $x_small: 10px;
 $small: 15px;
 $medium: 20px;
 $big: 44px;
+$large: 70px;
 
 .main {
     display: block;
@@ -34,6 +35,12 @@ $big: 44px;
 
 .big {
     width: $big;
+
+    @extend .main;
+}
+
+.large {
+    width: $large;
 
     @extend .main;
 }
